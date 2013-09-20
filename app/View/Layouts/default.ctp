@@ -35,6 +35,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
+		echo $this->Html->script('jquery');
 	?>
 </head>
 <body>
@@ -58,5 +59,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		</div>
 	</div>
 	<?php echo $this->element('sql_dump'); ?>
+	<?php echo $this->Js->writeBuffer(); // Write cached scripts ?>
 </body>
 </html>
