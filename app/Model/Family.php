@@ -1,5 +1,6 @@
 <?php
 class Family extends AppModel{
+	public $hasMany = 'Branch';
 	public $validate = array(
 		'familia' => array(
 			'No Vacio' => array(

@@ -58,4 +58,23 @@ class FamiliasController extends AppController{
 	        return $this->redirect(array('action' => 'index'));
 	    }
 	}
+
+	public function detalles($id = null){
+		if (!$id) {
+			throw new NotFoundException(__('Familia No Valida'));
+		}
+		$family = $this->Family->findById($id);
+		if (!$family) {
+			throw new NotFoundException(__('Familia No Valida'));
+		}
+		$this->set('families', $family);
+	}
+
+	public function buscar(){
+		if ($this->request->is('get')) {
+			$this->Paginator->settings = $this->paginate;
+			$families = $this->Paginator->paginate('Family', array('Family.familia LIKE' => "%{$this->params['url']['familia']}%"));
+    		$this->set('families', $families);
+		}
+	}
 }

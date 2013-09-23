@@ -1,7 +1,7 @@
 <div class='index'>
 <h2>Familias</h2>
 <?php 
-	echo $this->Form->create('familias', array('action' => 'buscar', 'type' => 'get'));
+	echo $this->Form->create(array('type' => 'get'));
 	echo $this->Form->input('Family.familia');
 	echo $this->Form->end('Buscar');
 ?>
@@ -31,6 +31,7 @@
 <div class='actions'>
 	<h3>Acciones</h3>
 	<ul>
+		<li><?php echo $this->Html->link('Ver Familias', array('action' => 'index')); ?></li>
 		<li><?php echo $this->Html->link('Agregar Familia', array('action' => 'agregar')); ?></li>
 	</ul>
 </div>
