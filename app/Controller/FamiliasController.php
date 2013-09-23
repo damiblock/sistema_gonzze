@@ -11,8 +11,6 @@ class FamiliasController extends AppController{
 
 	public function index(){
 		$this->Paginator->settings = $this->paginate;
-
-    	// similar to findAll(), but fetches paged results
     	$data = $this->Paginator->paginate('Family');
     	$this->set('families', $data);
 	}

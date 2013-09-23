@@ -2,10 +2,10 @@
 <h2>Marcas</h2>
 <table>
 	<tr>
-		<td>Id</td>
-		<td>Familia</td>
-		<td>Marca</td>
-		<td>Acciones</td>
+		<th>Id</th>
+		<th>Familia</th>
+		<th>Marca</th>
+		<th>Acciones</th>
 	</tr>
 	<?php foreach($branches as $branch): ?>
 	<tr>

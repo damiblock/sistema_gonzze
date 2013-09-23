@@ -7,9 +7,9 @@
 ?>
 <table>
 	<tr>
-		<td>Id</td>
-		<td>Familia</td>
-		<td>Acciones</td>
+		<th>Id</th>
+		<th>Familia</th>
+		<th>Acciones</th>
 	</tr>
 	<?php foreach($families as $family): ?>
 	<tr>
